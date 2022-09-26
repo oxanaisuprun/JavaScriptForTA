@@ -71,4 +71,11 @@
 
 
 // // task 8
-// let currentTime = prompt("How time is it?", "HH:MM:SS");
+const secInMin = 60;
+const minInHour = 60;
+const hourInDay = 24;
+let daysInMonth = prompt("Enter days in month");
+let secInHour = secInMin * minInHour;
+let secInDay = secInHour * hourInDay;
+let secinMonth = secInDay * daysInMonth;
+console.log(`Seconds in a minute is ${secInMin}, \nSeconds in an Hour is ${secInHour}, \nSeconds is a day is ${secInDay}, \nSeconds in a month is ${secinMonth}`); 
