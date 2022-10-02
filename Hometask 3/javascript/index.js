@@ -72,3 +72,50 @@
 
 
 // task 6
+// const arr = [3, 4, 10, -5, 5, 3];
+// function findUnique(arr){
+//         const distinctValues = arr.filter((x, i, a) => a.indexOf(x) == i);
+//     if (arr.length == distinctValues.length){
+//         return true;
+//     }else{
+//         return false;
+//     }
+// }
+// console.log(findUnique(arr));
+
+// ...........................................................................
+
+
+
+// task 7
+// const arr = [3, 4, 10, -5]
+// function lastElem(arr, lastIndex){
+//     if (lastIndex == undefined){
+//         lastIndex = 1;
+//     }
+//     if (lastIndex > arr.length){
+//         lastIndex = arr.length;
+//     }
+//     for (let i = 1; i<=lastIndex; i++){
+//         console.log(arr[arr.length - i]);
+//     }
+// }
+// lastElem(arr, 8);
+
+// ...........................................................................
+
+
+
+// task 8
+function toCapitalize(inputString){
+    const arr = inputString.split(" ");
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+    }
+    const outputString = arr.join(" ");
+    return outputString;
+}
+console.log(toCapitalize("i love java script"));
+
+
+
