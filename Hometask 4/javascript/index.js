@@ -39,54 +39,46 @@
 
 //Task 3
 class MonthException {
-    constructor(message) {
-        this.message = message;
-    }
-    exceptionMessage() {
-        console.log("Incorrect month number");
+    constructor(name) {
+    this.name = name;
     }
 }
+let MonthExceptionNumber = new MonthException ("MonthException Incorrect month number");
 function showMonthName(month) {
+    const monthes = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     try {
-        if (month == "" || month > 12 || month < 1 || isNaN(month)) throw MonthException.exceptionMessage;
-        switch (month) {
-            case 1:
-                return "January";
-                break;
-            case 2:
-                return "Fabruary";
-                break;
-            case 3:
-                return "March";
-                break;
-            case 4:
-                return "April";
-                break;
-            case 5:
-                return "May";
-                break;
-            case 6:
-                return "June";
-                break;
-            case 7:
-                return "July";
-                break;
-            case 8:
-                return "August";
-                break;
-            case 9:
-                return "September";
-                break;
-            case 10:
-                return "October";
-                break;
-            case 11:
-                return "November";
-                break;
-
-        }
+        if(month>monthes.length || month<1 || isNaN(month)) throw MonthExceptionNumber.name;
+        return monthes[month-1];
     } catch (error) {
         return error;
     }
 }
 console.log(showMonthName(14)); 
+
+
+// // Task 4
+// function showUser(id){
+//     try{
+//         if (id < 0) throw "ID must not be negative";
+//         let user = {
+//         id: id,
+//         }
+//         return user;
+//     }catch(error){
+//         return error;
+//     }
+// }
+// // console.log(showUser(-5));
+
+// function showUsers(ids){
+//     const myArr = ids;
+//     let newArr = [];
+//     for (let i=0; i<myArr.length; i++){
+//         // console.log(showUser(myArr[i]));
+        
+//             newArr.push(showUser(myArr[i]));
+//         }
+//         console.log(newArr);
+//     }
+    
+// showUsers([7, -12, 44, 22]);
