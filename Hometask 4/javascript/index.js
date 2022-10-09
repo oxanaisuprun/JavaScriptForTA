@@ -47,7 +47,9 @@
 // function showMonthName(month) {
 //     const monthes = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 //     try {
-//         if(month>monthes.length || month<1 || isNaN(month)) throw new MonthException('Incorrect month number');
+//         if(month>monthes.length || month<1 || isNaN(month)){
+//      throw new MonthException('Incorrect month number');
+// }
 //         return monthes[month-1];
 //     } catch (error) {
 //         errorMessage = error.name + " " + error.message;
@@ -60,7 +62,9 @@
 // // Task 4
 function showUser(id){
     try{
-        if (id < 0) throw `ID must not be negative: ${id}`;
+        if (id < 0) {
+        throw `ID must not be negative: ${id}`;
+    }
         let user = {
         id: id,
         }
