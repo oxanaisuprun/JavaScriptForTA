@@ -64,74 +64,99 @@
 
 
 // // Task 4
-// class Worker{
-//     _experience = 1.2;
-//     value = 1.5;
-//     set showExp(value){
-//         this._experience = value;
-//     }
-//     get showExp(){
-//         return this._experience;
-//     }
-//     constructor (fullName, dayRate, workingDays){
-//         this.fullName = fullName;
-//         this.dayRate = dayRate;
-//         this.workingDays = workingDays;
-//     }
-//     showSalary(){
-//         let salary = this.dayRate * this.workingDays;
-//         console.log(this.fullName + " salary " + salary);
-//     }
-//     showSalaryWithExperience(){
-//         let salaryWithExperience = this.dayRate * this.workingDays * this._experience;
-//         console.log(this.fullName + " salary " + salaryWithExperience);
-//     }
-// }
+class Worker{
+    _experience = 1.2;
+    value = 1.5;
+    set showExp(value){
+        this._experience = value;
+    }
+    get showExp(){
+        return this._experience;
+    }
+    constructor (fullName, dayRate, workingDays){
+        this.fullName = fullName;
+        this.dayRate = dayRate;
+        this.workingDays = workingDays;
+    }
+    showSalary(){
+        let salary = this.dayRate * this.workingDays;
+        console.log(this.fullName + " salary " + salary);
+    }
+    showSalaryWithExperience(){
+        let salaryWithExperience = this.dayRate * this.workingDays * this._experience;
+        console.log(this.fullName + " salary " + salaryWithExperience);
+    }
+}
 
-// let worker1 = new Worker("John Johnson", 20, 23);
+let worker1 = new Worker("John Johnson", 20, 23);
+console.log(worker1.fullName);            
+worker1.showSalary();
+console.log("New experience: " + worker1.showExp);
+worker1.showSalaryWithExperience();
+worker1.setExp = 1.5;
+console.log("New experience: " + worker1.showExp);
+worker1.showSalaryWithExperience();
+     
+let worker2 = new Worker("Tom Tomson", 48, 22);
 
-// let worker2 = new Worker("Tom Tomson", 48, 22);
-
-// let worker3 = new Worker("Andy Ander", 29, 23);
+let worker3 = new Worker("Andy Ander", 29, 23);
 
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
 // // Task 5
-class GeometricFigure {
-    constructor(type){
-        this.type = type;
-    }
-    getArea(){
-        return 0;
-    }
-    toString() {
-        return Object.getPrototypeOf(this).constructor.name;
-   }   
-}
+// class GeometricFigure {
+//     constructor(a, b, r){
+//         this.a = a;
+//         this.b = b;
+//         this.r = r;
+//     }
+//     getArea(){
+//         return 0;
+//     }
+//     toString() {
+//         return Object.getPrototypeOf(this).constructor.name;
+//    }   
+// }
 
-class Triangle extends GeometricFigure {
-    getArea(a,b,c){
-        let p = (a + b + c)/2;
-        let triangleArea = Math.sqrt(p*(p - a)*(p-b)*(p-c));
-        return triangleArea;
-    }
-}
+// class Triangle extends GeometricFigure {
+//     constructor(a,b){
+//         super(a,b);
+//     }
+//     getArea(){
+//         let triangleArea = (this.a * this.b)/2;
+//         return triangleArea;
+//     }
+// }
 
-class Square extends GeometricFigure{
-    getArea(a,b){
-        let squareArea = a*b;
-        return squareArea;
-    }
-}
+// class Square extends GeometricFigure{
+//     constructor(a){
+//         super(a);
+//     }
+//     getArea(){
+//         let squareArea = Math.pow(this.a, 2);
+//         return squareArea;
+//     }
+// }
 
-class Circle extends GeometricFigure{
-    getArea(r){
-        const pi = Math.PI;
-        let circleArea = pi* Math.pow(r, 2);
-        return circleArea;
-    }
-}
-let figure1 = new Circle ();
-console.log(figure1.getArea(6));
-console.log(figure1.toString());
+// class Circle extends GeometricFigure{
+//     constructor(a){
+//         super(a);
+//     }
+//     getArea(){
+//         let circleArea = Math.PI * Math.pow(this.a, 2);
+//         return circleArea;
+//     }
+// }
+
+// function handleFigures(figures){
+//     let newArea = [];
+//     figures.forEach(figure => {
+//         newArea.push(figure.getArea());
+//         console.log(`Geometric figure: ${figure.toString()} - area: ${figure.getArea()}`);        
+//     });
+    // let sum = newArea.reduce((total, currentValue) => total + currentValue);
+//     console.log(sum);
+// }
+// const figures = [new Triangle(4, 5), new Square(7), new Circle(5)];
+// handleFigures(figures);
