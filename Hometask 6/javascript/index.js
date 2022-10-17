@@ -47,15 +47,15 @@
 
 // Task 5
 
-document.querySelector("h1").style.backgroundColor = "#90EE90";
-document.querySelector("div>p").style.fontWeight = "bold";
-document.querySelector("div>p").nextElementSibling.style.color = "red";
-document.getElementById("myDiv").children[2].style.textDecoration = "underline";
-document.getElementById("myDiv").lastElementChild.style.fontStyle = "italic";
-document.querySelector("span").style.visibility = "hidden";
+// document.querySelector("h1").style.backgroundColor = "#90EE90";
+// document.querySelector("div>p").style.fontWeight = "bold";
+// document.querySelector("div>p").nextElementSibling.style.color = "red";
+// document.getElementById("myDiv").children[2].style.textDecoration = "underline";
+// document.getElementById("myDiv").lastElementChild.style.fontStyle = "italic";
+// document.querySelector("span").style.visibility = "hidden";
 
-let newValue = document.getElementById("myList").children[0].innerText + document.getElementById("myList").children[1].innerText + document.getElementById("myList").children[2].innerText;
-document.getElementById("myList").innerHTML = newValue;
+// let newValue = document.getElementById("myList").children[0].innerText + document.getElementById("myList").children[1].innerText + document.getElementById("myList").children[2].innerText;
+// document.getElementById("myList").innerHTML = newValue;
 
 
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -79,3 +79,10 @@ document.getElementById("myList").innerHTML = newValue;
   
   
   // Task 7
+let newMain = document.createElement("main");
+newMain.className = "mainClass check item";
+let newDiv = document.createElement("div");
+newDiv.id = "myDiv";
+newMain.appendChild(newDiv);
+newDiv.insertAdjacentHTML('afterend', '<p>First paragraph</p>');
+console.log(newMain);
