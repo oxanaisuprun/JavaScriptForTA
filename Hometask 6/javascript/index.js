@@ -79,10 +79,12 @@
   
   
   // Task 7
-let newMain = document.createElement("main");
-newMain.className = "mainClass check item";
-let newDiv = document.createElement("div");
-newDiv.id = "myDiv";
-newMain.appendChild(newDiv);
-newDiv.insertAdjacentHTML('afterend', '<p>First paragraph</p>');
-console.log(newMain);
+// let newMain = document.createElement("main");
+// newMain.className = "mainClass check item";
+// let newDiv = document.createElement("div");
+// newDiv.id = "myDiv";
+// newMain.appendChild(newDiv);
+// newDiv.insertAdjacentHTML('afterend', '<p>First paragraph</p>');
+// console.log(newMain);
+
+

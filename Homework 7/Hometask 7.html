@@ -1,0 +1,53 @@
+<!DOCTYPE html>​
+<html lang="en">​
+<head>​
+    <meta charset="UTF-8">​
+    <title>Hometask 7</title>​
+</head>​
+<body>
+    <p id ='text'>I learning JavaScript events!</p> 
+        <div>
+            <button onclick="changeCSS()">Change style!</button>
+        </br></br>
+        </div>
+    <div>
+        <button onclick="makeBlue()">Click to make the page blue</button>
+        <button ondblclick="makePink()">Double click to make the page pink</button>
+        <button onmouseup="makeWhite()" onmousedown="makeBrown()">Click and hold to make the page brown</button>
+        <a onmouseover="makeYellow()" onmouseleave="makeWhite()">Hover over to make page yellow</a>
+    </br></br>
+    </div>
+    <div>
+        <select name="names" id="names">
+            <option>Peter</option>
+            <option>John</option>
+            <option>Alice</option>
+            <option>Alex</option>
+            <option>Iren</option>
+        </select>
+        <button onclick="deleteSelection()">Choose and Delete</button>
+        </br></br>
+    </div>
+    <div>
+        <button onclick="onPress()" onmouseover="mouseOn()" onmouseleave="mouseOff()">Live button!</button>
+        <p id="button_event"></p>
+    </br></br>
+    </div>
+    <div>
+        <p id="resize"></p>
+    </br></br>
+    </div>
+    <div>
+        <select name="country" id="country" onchange="onCountryChanged()">
+            <option value="ger">Germany</option>
+            <option value="usa">USA</option>
+            <option value="ukr">Ukraine</option>
+        </select>
+                            
+        <select name="cities" id="cities" onchange="onCityChanged()"></select>
+        <p></p>
+        
+    </div>
+    <script src=" ./javascript/index.js"></script> 
+</body>​
+</html>
