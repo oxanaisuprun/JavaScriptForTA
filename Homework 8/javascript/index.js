@@ -15,7 +15,7 @@
 
 //Task 2
 // function checkEmail(value){
-//     if(/[@]/.test(value)){
+//     if(/\S+@\S+\.\S+/.test(value)){
 //         return true;
 //     }
 //     else {
@@ -29,7 +29,7 @@
 
 //Task 3
 // let value = "cdbBdbsbz";
-// let result = value.match(/d[bB]+d/g);
+// let result = value.match(/d(b+)(d)/i);
 // console.log(result);
 
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -72,4 +72,4 @@
 function checkLogin (value) {
     console.log(/^([a-z0-9]|[-._](?![-._])){2,10}$/g.test(value));
 }
-checkLogin("1ee1.1ret3");
+checkLogin('ee1*1ret3');
