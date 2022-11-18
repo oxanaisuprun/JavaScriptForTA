@@ -1,6 +1,6 @@
 //Task 1
 // let arr = ["Tom", "Sam", "Ray", "Bob"];
-// let [x, y, t, ...z] = arr;
+// let [x, y, , ...z] = arr;
 
 
 // console.log(x); // "Tom"
@@ -23,14 +23,16 @@
  //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>.
  
  // Task 3
-//  function mul(...params){
-//     let mult = 0;
-//     for (let i = 0; i < params.length; i++) {
-//         if (typeof params[i] == 'number'){
-//             mult += params[i];
+//  function mul(...rest){
+//     let result = 0;
+//     let isNumber;
+//     for (let i of rest) {
+//         if (typeof i == 'number'){
+//             result += i;
+//             isNumber = true;
 //         }
 //     }
-//     return mult;
+//     return isNumber ? result : 0;
 //  }
 //  console.log(mul(1, "str", 2, 3, true)); // 6
 //  console.log(mul(null, "str", false, true)); // 0
@@ -69,10 +71,10 @@
 let keys = [1, 2, 3, 4];
 let values = ["div", "span", "b", "i"];
 let map = mapBuilder(keys, values);
-function mapBuilder() {
+function mapBuilder(keys, values) {
     const map = new Map();
-    for(let i = 0; i < keys.length; i++){
-       map.set(keys[i], values[i]);
+    for(let i of keys){
+       map.set(i, values[i-1]);
     };
     return map;
  };
