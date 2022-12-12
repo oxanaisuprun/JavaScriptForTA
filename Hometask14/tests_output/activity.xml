@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="1"
+            failures="0"
+            tests="0">
+
+  <testsuite name="activity"
+    errors="1" failures="0" hostname="" id="" package="activity" skipped="2"
+    tests="0" time="0.000" timestamp="">
+  
+
+  
+    <system-err>
+       An error occurred while creating a new Selenium Server session: [WebDriverError] Invalid username or password
+ An error occurred while creating a new Selenium Server session: [WebDriverError] Invalid username or password
+    </system-err>
+  
+
+    
+    <error message=""><![CDATA[
+      
+      ]]></error>  
+
+  
+    
+    <testcase
+      name="first element is disabled" classname="activity">
+      <skipped />
+    </testcase>
+    
+    <testcase
+      name="second element is active" classname="activity">
+      <skipped />
+    </testcase>
+    
+  
+  </testsuite>
+</testsuites>
