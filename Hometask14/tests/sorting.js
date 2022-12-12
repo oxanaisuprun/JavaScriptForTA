@@ -11,7 +11,6 @@ module.exports ={
         browser.assert.containsText('//table[@id="table2"]//tbody//tr[3]//td[@class="dues"]', "$51.00");
         browser.assert.containsText('//table[@id="table2"]//tbody//tr[4]//td[@class="dues"]', "$100.00");
 
-
         browser.end();
     }
 }
